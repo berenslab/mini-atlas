@@ -2,7 +2,7 @@
 ![patch-seq coverage](cover.png)
 https://www.biorxiv.org/content/10.1101/2020.02.03.929158v1
 
-This repository contains the analysis code and the preprocessed data for the above manuscript. Instructions will follow shortly.
+This repository contains the analysis code and the preprocessed data for the above manuscript. 
 
 ------------
 
@@ -12,6 +12,12 @@ All preprocessed data are located in the `data/` folder. This includes meta data
 
 ## Downloading the raw data
 
-* Raw morphological reconstructions in SWC format can be downloaded from [ftp://download.brainimagelibrary.org:8811/3a/88/3a88a7687ab66069/](https://bit.ly/2VIvP3Z). Download three folders (`excitatory`, `inhibitory`, and `vip_dendrites_only`) and put them into `data/raw/morph/`. These files are needed to create figures that show morphological reconstructions.
+* Raw morphological reconstructions in SWC format can be downloaded from [ftp://download.brainimagelibrary.org:8811/3a/88/3a88a7687ab66069/](https://bit.ly/2VIvP3Z). Download three folders (`excitatory`, `inhibitory`, and `vip_dendrites_only`) and put them into `data/raw/morph/`. These files are needed to create figures that show morphological reconstructions. Extracted morphological features are provided in this repository (see above).
 
-* Raw electrophysiological traces in NWB format can be downloaded from https://gui.dandiarchive.org/#/file-browser/folder/5e7115073da50caa9adaf419 . Download mouse id folders and put them into `data/raw/ephys/`. These files are needed to create figures that show the electrophysiological features extraction procedure (so called sanity check plots), extract three meaningful traces for all cells and save them in a .pickle file, and to produce a .csv file with all extracted features of all cells.
+* Raw electrophysiological traces in NWB format can be downloaded from https://dandiarchive.org/dandiset/000008/. Download all folders (using `dandi` command line tool as described [here](https://github.com/dandi/dandiarchive/issues/385#issuecomment-639803133)] and put them into `data/raw/ephys/`. These files are needed to create figures that illustrate the extraction procedure of electrophysiological features, and to create figures that show electrophysiological traces. Extracted electrophysiological features are provided in this repository (see above).
+
+* Raw transcriptomic data in FASTQ format ... Instructions will follow shortly.
+
+## The order of running scripts to reproduce our figures
+
+Instructions will follow shortly.
