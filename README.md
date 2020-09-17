@@ -20,9 +20,10 @@ All meta data and preprocessed data are located in the `data/` folder. This incl
 
 ## The order of running scripts to reproduce our figures
 
-1. Run `extract-morphometric-features.ipynb` to extract the morphometric features. The resulting CSV tables are provided in this repository.
-2. Run `preprocess-ephys-files.ipynb` to extract the electrophysiological features. The resulting CSV tables are provided in this repository. This script also creates the supplementary figure illustrating the extraction process (and creates similar figures for all cells).
+1. Run `preprocess-morph-SWC-files.ipynb` to preprocess (resample, smoooth, etc.) the raw SWC files with reconstructed morphologies. Resulting SWC files are saved in a separate folder.
+1. Run `extract-morphometric-features.ipynb` to extract the morphometric features using the preprocessed SWC files. The resulting CSV tables are provided in this repository.
+2. Run `preprocess-ephys-files.ipynb` to extract the electrophysiological features. The resulting CSV tables are provided in this repository. This script also creates one supplementary figure illustrating the extraction process (and creates similar figures for all cells).
 3. Run `allen-data-preprocess.ipynb` to preprocess the Allen Institute data: select variable genes, run t-SNEs, etc. The results are saved as .pickle files.
 4. Run `patch-seq-data-load.ipynb` to load all our data and package together into a convenient Python object. The result is saved as a .pickle file.
-5. Run `ttype-assignment.ipynb` to assign all cells to the t-types. The result is saved as a .pickle file. This notebook also produces some supplementary figures.
+5. Run `ttype-assignment.ipynb` to assign all cells to the t-types. The result is saved as a .pickle file. This notebook also produces several supplementary figures.
 6. The remaining notebooks load the .pickle files and produce individual figures. They can be run in any order.
