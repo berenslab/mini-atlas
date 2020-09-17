@@ -16,8 +16,13 @@ All meta data and preprocessed data are located in the `data/` folder. This incl
 
 * Raw electrophysiological traces in NWB format can be downloaded from https://dandiarchive.org/dandiset/000008/. Download all folders (using `dandi` command line tool as described [here](https://github.com/dandi/dandiarchive/issues/385#issuecomment-639803133)] and put them into `data/raw/ephys/`. These files are needed to create figures that illustrate the extraction procedure of electrophysiological features, and to create figures that show electrophysiological traces. Extracted electrophysiological features are provided in this repository (see above). NOTE: Currently the raw data that was prepared for the revision are still missing from the DANDI archive; this will be resolved shortly.
 
-* Raw transcriptomic data in FASTQ format can be downloaded from http://data.nemoarchive.org/biccn/grant/zeng/tolias/. NOTE: the data prepared for revision is currently missing, but should appear shortly.
+* Raw transcriptomic data in FASTQ format can be downloaded from http://data.nemoarchive.org/biccn/grant/zeng/tolias/. We describe in `data/zumis/` how we converted the FASTQ files into the count tables.
 
 ## The order of running scripts to reproduce our figures
 
-Instructions will follow shortly.
+1. Run `extract-morphometric-features.ipynb` to extract the morphometric features. The resulting CSV tables are provided in this repository.
+2. Run `preprocess-ephys-files.ipynb` to extract the electrophysiological features. The resulting CSV tables are provided in this repository. This script also creates the supplementary figure illustrating the extraction process (and creates similar figures for all cells).
+3. Run `allen-data-preprocess.ipynb` to preprocess the Allen Institute data: select variable genes, run t-SNEs, etc. The results are saved as .pickle files.
+4. Run `patch-seq-data-load.ipynb` to load all our data and package together into a convenient Python object. The result is saved as a .pickle file.
+5. Run `ttype-assignment.ipynb` to assign all cells to the t-types. The result is saved as a .pickle file. This notebook also produces some supplementary figures.
+6. The remaining notebooks load the .pickle files and produce individual figures. They can be run in any order.
