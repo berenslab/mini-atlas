@@ -22,7 +22,7 @@ All meta data and preprocessed data are located in the `data/` folder. This incl
 
 ## Python notebooks to reproduce our analysis and figures
 
-1. Run `preprocess-morph-SWC-files.ipynb` to preprocess (resample, smoooth, etc.) the raw SWC files with reconstructed morphologies. Resulting SWC files are saved in a separate folder.
+1. Run `preprocess-morph-SWC-files.ipynb` to preprocess (resample, smooth, etc.) the raw SWC files with reconstructed morphologies. Resulting SWC files are saved in a separate folder.
 1. Run `extract-morphometric-features.ipynb` to extract the morphometric features using the preprocessed SWC files. The resulting CSV tables are provided in this repository.
 2. Run `preprocess-ephys-files.ipynb` to extract the electrophysiological features. The resulting CSV tables are provided in this repository. This script also creates one supplementary figure illustrating the extraction process (and creates similar figures for all cells).
 3. Run `allen-data-preprocess.ipynb` to preprocess the Allen Institute data: select variable genes, run t-SNEs, etc. The results are saved as .pickle files.
