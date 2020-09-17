@@ -1,4 +1,4 @@
-# Phenotypic variation within and across transcriptomic cell types in mouse motor cortex
+# Phenotypic variation of transcriptomic cell types in mouse motor cortex
 ![patch-seq coverage](cover.png)
 https://www.biorxiv.org/content/10.1101/2020.02.03.929158v1
 
