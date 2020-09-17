@@ -1,0 +1,41 @@
+project: scala_kobak_patch_seq
+sequence_files:
+  file1:
+    name: path/to/runfolder/reads_for_zUMIs.R1.fastq.gz
+    base_definition:
+    - cDNA(1-75)
+  file2:
+    name: path/to/runfolder/reads_for_zUMIs.index.fastq.gz
+    base_definition: BC(1-8)
+reference:
+  STAR_index: path/to/star_idx/STAR7idx_noGTF
+  GTF_file: path/to/gencode_gtf/gencode.vM23.annotation.gtf
+  additional_STAR_params: '--clip3pAdapterSeq CTGTCTCTTATACACATCT'
+  additional_files:
+    - path/to/ERCC_fasta/ERCC92.fa
+out_dir: output_path/zUMIs
+num_threads: 50
+mem_limit: 50
+filter_cutoffs:
+  BC_filter:
+    num_bases: 1
+    phred: 20
+  UMI_filter:
+    num_bases: 1
+    phred: 20
+barcodes:
+  barcode_num: ~
+  barcode_file: path/to/runfolder/reads_for_zUMIs.expected_barcodes.txt
+  automatic: no
+  BarcodeBinning: 0
+  nReadsperCell: 1
+  demultiplex: yes
+counting_opts:
+  introns: yes
+  downsampling: '500000,750000,1000000,1000000-2000000'
+  Ham_Dist: 0
+  velocyto: no
+  primaryHit: yes
+  twoPass: no
+make_stats: yes
+which_Stage: Filtering
