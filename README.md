@@ -18,7 +18,7 @@ All meta data and preprocessed data are located in the `data/` folder. This incl
 
 * Raw transcriptomic data in FASTQ format can be downloaded from http://data.nemoarchive.org/biccn/grant/zeng/tolias/. We describe in `data/zumis/` how we converted the FASTQ files into the count tables.
 
-## The order of running scripts to reproduce our figures
+## Python notebooks to reproduce our analysis and figures
 
 1. Run `preprocess-morph-SWC-files.ipynb` to preprocess (resample, smoooth, etc.) the raw SWC files with reconstructed morphologies. Resulting SWC files are saved in a separate folder.
 1. Run `extract-morphometric-features.ipynb` to extract the morphometric features using the preprocessed SWC files. The resulting CSV tables are provided in this repository.
