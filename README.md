@@ -12,7 +12,7 @@ All meta data and preprocessed data are located in the `data/` folder. This incl
 
 ## Downloading the raw data
 
-* Raw morphological reconstructions in SWC format can be downloaded from [ftp://download.brainimagelibrary.org:8811/3a/88/3a88a7687ab66069/](https://bit.ly/2VIvP3Z). Download three folders (`excitatory`, `inhibitory`, and `vip_dendrites_only`) and put them into `data/raw/morph/`. These files are needed to create figures that show morphological reconstructions. Extracted morphological features are provided in this repository (see above).
+* Raw morphological reconstructions in SWC format can be downloaded from [https://download.brainimagelibrary.org/3a/88/3a88a7687ab66069/](https://download.brainimagelibrary.org/3a/88/3a88a7687ab66069/). Download three folders (`excitatory`, `inhibitory`, and `vip_dendrites_only`) and put them into `data/raw/morph/`. These files are needed to create figures that show morphological reconstructions. Extracted morphological features are provided in this repository (see above).
 
 * Raw electrophysiological traces in NWB format can be downloaded from https://dandiarchive.org/dandiset/000008/ and https://dandiarchive.org/dandiset/000035 (physiological temperature experiments). Download all folders (using `dandi` command line tool as described there) and put them into `data/raw/ephys/` and `data/raw/ephys_phys/` respectively. These files are needed to create figures that illustrate the extraction procedure of electrophysiological features, and to create figures that show electrophysiological traces. Extracted electrophysiological features of all cells are provided in `data/m1_patchseq_ephys_features.csv` and `data/m1_patchseq_phys_temp_ephys_features.csv`. 
 
