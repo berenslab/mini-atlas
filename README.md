@@ -1,6 +1,8 @@
 # Phenotypic variation of transcriptomic cell types in mouse motor cortex
 ![patch-seq coverage](cover.png)
-https://www.biorxiv.org/content/10.1101/2020.02.03.929158v1
+https://www.nature.com/articles/s41586-020-2907-3
+
+*Federico Scala\*, Dmitry Kobak\*, Matteo Bernabucci, Yves Bernaerts, Cathryn René Cadwell, Jesus Ramon Castro, Leonard Hartmanis, Xiaolong Jiang, Sophie Laturnus, Elanine Miranda, Shalaka Mulherkar, Zheng Huan Tan, Zizhen Yao, Hongkui Zeng, Rickard Sandberg, Philipp Berens & Andreas S. Tolias. Nature (2020)*
 
 This repository contains the analysis code and the preprocessed data for the above manuscript. 
 
