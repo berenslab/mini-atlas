@@ -18,7 +18,9 @@ All meta data and preprocessed data are located in the `data/` folder. This incl
 
 * Raw electrophysiological traces in NWB format can be downloaded from https://dandiarchive.org/dandiset/000008/ and https://dandiarchive.org/dandiset/000035 (physiological temperature experiments). Download all folders (using `dandi` command line tool as described there) and put them into `data/raw/ephys/` and `data/raw/ephys_phys/` respectively. These files are needed to create figures that illustrate the extraction procedure of electrophysiological features, and to create figures that show electrophysiological traces. Extracted electrophysiological features of all cells are provided in `data/m1_patchseq_ephys_features.csv` and `data/m1_patchseq_phys_temp_ephys_features.csv`. 
 
-* Raw transcriptomic data in FASTQ format can be downloaded from http://data.nemoarchive.org/biccn/grant/zeng/tolias/. We describe in `data/zumis/` how we converted the FASTQ files into the count tables.
+* Raw transcriptomic data in FASTQ format can be downloaded from http://data.nemoarchive.org/biccn/grant/zeng/tolias/. We describe in `data/zumis/` how we converted the FASTQ files into the count tables. NeMO accession for this dataset is https://assets.nemoarchive.org/dat-kq04hua.
+
+  The same data can also be downloaded from GEO at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE163764.
 
 ## Python notebooks to reproduce our analysis and figures
 
@@ -29,3 +31,7 @@ All meta data and preprocessed data are located in the `data/` folder. This incl
 4. Run `patch-seq-data-load.ipynb` to load all our data and package together into a convenient Python object. The result is saved as a .pickle file.
 5. Run `ttype-assignment.ipynb` to assign all cells to the t-types. The result is saved as a .pickle file. This notebook also produces several supplementary figures.
 6. The remaining notebooks load the .pickle files and produce individual figures. They can be run in any order.
+
+## Errata
+
+After the paper was published we realized that the morphological reconstruction for the `20171207sample1` neuron is wrong (it is a slighly modified copy of another neuron). We do not update the data here so that our analysis can be reproduced exactly. But for any follow-up analysis we recommend to delete the corresponding reconstruction and to mark this neuron as non-reconstructed in the meta data CSV table.
