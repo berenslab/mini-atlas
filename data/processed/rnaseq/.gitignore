@@ -2,3 +2,8 @@
 *
 # Except this file
 !.gitignore
+!10x-tsne-big.pickle
+!10x-tsne-exc.pickle
+!10x-tsne-viplamp.pickle
+!10x-tsne-pvsst.pickle
+!cvresults.pickle
